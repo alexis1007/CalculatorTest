@@ -18,54 +18,52 @@ public class PracticaCalculator {
         
         double operation = 0;
         int respuesta;
-        double a,b;
+        double a, b;
         
         while(true){
-            System.out.println("Selec te type of operation");
-            System.out.println("multiply: 1");
-            System.out.println("divide: 2");
-            System.out.println("add up: 3");
-            System.out.println("subtract 4");
+            System.out.println("Select the type of operation:");
+            System.out.println("1: Multiply");
+            System.out.println("2: Divide");
+            System.out.println("3: Add");
+            System.out.println("4: Subtract");
             
             respuesta = scan.nextInt();
             scan.nextLine();
             switch (respuesta){
                 case 1:
-                    System.out.println("what numbers do yo want multiply");
-                    a = scan.nextInt();
-                    scan.nextLine();
-                    b = scan.nextInt();
-                    scan.nextLine();
-                    System.out.println("The result is: "+(a*b));
+                    System.out.println("Enter the numbers you want to multiply:");
+                    a = scan.nextDouble();
+                    b = scan.nextDouble();
+                    System.out.println("The result is: " + (a * b));
                     break;
                 case 2:
-                    System.out.println("What numbers do you want divide");
-                    a = scan.nextInt();
-                    scan.nextLine();
-                    b = scan.nextInt();
-                    scan.nextLine();
-                    System.out.println("The result is: "+(a/b));
+                    System.out.println("Enter the numbers you want to divide:");
+                    a = scan.nextDouble();
+                    b = scan.nextDouble();
+                    if (b != 0) {
+                        System.out.println("The result is: " + (a / b));
+                    } else {
+                        System.out.println("Error: Division by zero is not allowed.");
+                    }
                     break;
                 case 3:
-                    System.out.println("What numbers do you want add");
-                    a = scan.nextInt();
-                    scan.nextLine();
-                    b = scan.nextInt();
-                    scan.nextLine();
-                    System.out.println("The result is: "+(a+b));
+                    System.out.println("Enter the numbers you want to add:");
+                    a = scan.nextDouble();
+                    b = scan.nextDouble();
+                    System.out.println("The result is: " + (a + b));
                     break;
                 case 4:
-                    System.out.println("What numbers do you want subtract");
-                    a = scan.nextInt();
-                    scan.nextLine();
-                    b = scan.nextInt();
-                    scan.nextLine();
-                    System.out.println("The result is: "+(a-b));
+                    System.out.println("Enter the numbers you want to subtract:");
+                    a = scan.nextDouble();
+                    b = scan.nextDouble();
+                    System.out.println("The result is: " + (a - b));
                     break;
-                    
+                default:
+                    System.out.println("Invalid option. Please select a valid operation.");
+                    break;
             }
             System.out.println("=========");
-        }      
+        }     
   
     }
 }
