@@ -26,6 +26,7 @@ public class PracticaCalculator {
             System.out.println("2: Divide");
             System.out.println("3: Add");
             System.out.println("4: Subtract");
+            System.out.println("5: Exit");
             
             respuesta = scan.nextInt();
             scan.nextLine();
@@ -57,6 +58,11 @@ public class PracticaCalculator {
                     a = scan.nextDouble();
                     b = scan.nextDouble();
                     System.out.println("The result is: " + (a - b));
+                    break;
+                case 5:
+                    System.out.println("Goodbye!");
+                    scan.close();
+                    System.exit(0);
                     break;
                 default:
                     System.out.println("Invalid option. Please select a valid operation.");
